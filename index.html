@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charlemos de algo...</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="carta-contenedor" id="cartaContenedor">
+      <div class="carta" id="carta">
+        <div class="cara frente">
+          <p>💌 Para ti...</p>
+        </div>
+        <div class="cara trasera">
+          <p>Haz clic para abrir</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta" id="tarjetaContenido" style="display: none;">
+      <img src="imagen/horimiya.png" alt="Horimiya" class="imagen-pareja">
+
+      <div class="mensaje-principal">
+        <p>Tengo algo importante que preguntarte... 💓</p>
+        <button id="verPregunta">Haz clic para ver</button>
+      </div>
+
+      <div id="pregunta" class="pregunta-oculta">
+        <p>¿Quieres formar algo bonito a mi lado , siendo mi novia?</p>
+        <div class="botones">
+          <button class="btn-si" onclick="responder('sí')">Sí 🥰</button>
+          <button class="btn-no" id="btnNo" onclick="moverBoton()">No
+            🥺</button>
+        </div>
+        <p id="confirmacion" class="confirmacion-oculta">¿Estás segura?😳</p>
+      </div>
+    </div>
+
+    <audio autoplay loop>
+      <source src="musica.mp3" type="audio/mpeg" />
+
+    </audio>
+    
+    <div id="flores-container"></div>
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
